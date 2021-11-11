@@ -33,6 +33,10 @@ Print
 shift + Print
 		flameshot full -p $HOME/storeDrive/storeDriveBig/Pictures/ScreenShots/flameShot/
 
+# Email
+XF86Mail
+  firefox --no-remote -P E-mail
+
 
 # # make sxhkd reload its configuration files:
 # super + Escape
@@ -201,7 +205,6 @@ ctrl + shift + super + q
 super + q
 	echo "wow"
 
-load startup script
-
+# load startup script
 F8
   bash $HOME/codeDNA/confiFILES/system/makeEasy/startUP.sh

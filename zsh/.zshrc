@@ -242,4 +242,6 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 #---------------------------------------------------------------#
 # for Aria2 config location
 export XDG_CONFIG_HOME="$HOME/.config"
+# for sdcv, command based dictionary
+export STARDICT_DATA_DIR="$HOME/codeDNA/confiFILES/system/apps/Dictionary/sdcv"
 #---------------------------------------------------------------#

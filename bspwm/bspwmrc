@@ -69,11 +69,13 @@ bspc rule -a zoom desktop='^7' follow=on focus=on
 bspc rule -a Caprine desktop='^7' state=floating focus=on
 
 bspc rule -a Eog state=floating follow=on focus=on
+bspc rule -a Sxiv state=floating follow=on focus=on
 bspc rule -a nomacs state=floating follow=on focus=on
 bspc rule -a settings state=floating follow=on focus=on
 bspc rule -a Guvcview tate=floating follow=on focus=on
 bspc rule -a Stremio desktop='^6' follow=on focus=on
 bspc rule -a Gpick state=floating focus=on
+bspc rule -a scrcpy state=floating focus=on
 
 
 #window rules
