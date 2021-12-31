@@ -1,5 +1,4 @@
 #! /bin/sh
-
 #--------swap CapsLock and Esc
 xmodmap -e "clear Lock"         #or xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keycode 66 = Escape"
@@ -60,8 +59,7 @@ bspc config focus_follows_pointer	true
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
 bspc rule -a Gnome-calculator state=floating
-bspc rule -a Firefox desktop='^8' follow=on focus=on
-bspc rule -a mpv state=floating follow=on focus=on
+bspc rule -a mpv state=floating follow=on focus=on rectangle=1000x600+185+100
 
 bspc rule -a discord desktop='^7' follow=on focus=on
 bspc rule -a Telegram-desktop desktop='^7' follow=on focus=on
@@ -70,12 +68,62 @@ bspc rule -a Caprine desktop='^7' state=floating focus=on
 
 bspc rule -a Eog state=floating follow=on focus=on
 bspc rule -a Sxiv state=floating follow=on focus=on
-bspc rule -a nomacs state=floating follow=on focus=on
 bspc rule -a settings state=floating follow=on focus=on
 bspc rule -a Guvcview tate=floating follow=on focus=on
 bspc rule -a Stremio desktop='^6' follow=on focus=on
 bspc rule -a Gpick state=floating focus=on
 bspc rule -a scrcpy state=floating focus=on
+
+# XDM
+bspc rule -a xdman-Main state=floating focus=on
+# firefox pop-up window
+bspc rule -a firefox follow=on state=floating focus=on
+bspc rule -a "Tor Browser" follow=on state=floating focus=on
+# brave
+bspc rule -a Brave-browser follow=on state=floating focus=on
+# dolphin
+bspc rule -a dolphin follow=on state=floating focus=on rectangle=666x724+150+50
+# color picker
+bspc rule -a ColorPicker follow=on state=floating focus=on
+bspc rule -a color-picker follow=on state=floating focus=on
+# wireshark
+bspc rule -a Wireshark follow=on state=floating focus=on
+# chrome
+bspc rule -a Chromium-browser follow=on state=floating focus=on
+# Virtual box
+bspc rule -a 'VirtualBox Manager' follow=on state=floating focus=on
+bspc rule -a 'VirtualBox Machine' follow=on state=floating focus=on
+# blender
+bspc rule -a Blender follow=on state=floating focus=on
+# Jupyter
+bspc rule -a urxvt follow=on state=floating focus=on
+bspc rule -a URxvt follow=on state=floating focus=on
+# xterm
+bspc rule -a xterm follow=on state=floating focus=on
+bspc rule -a XTerm follow=on state=floating focus=on
+# for DearPyGui apps
+bspc rule -a 'Dear PyGui' follow=on state=floating focus=on
+bspc rule -a test follow=on state=floating focus=on
+bspc rule -a lzdn follow=on state=floating focus=on
+# for SFML
+bspc rule -a sfml-app follow=on state=floating focus=on
+# for zathura
+bspc rule -a Zathura follow=on state=floating focus=on
+bspc rule -a org.pwmt.zathura follow=on state=floating focus=on
+# for qemu
+bspc rule -a qemu state=floating
+bspc rule -a Qemu-system-x86_64 state=floating
+# tilix
+bspc rule -a Terminator follow=on state=floating focus=on rectangle=1300x420+30+50
+bspc rule -a terminator follow=on state=floating focus=on rectangle=1300x420+30+50
+# okular
+bspc rule -a okular follow=on state=floating focus=on
+# nomacs
+bspc rule -a nomacs follow=on state=floating focus=on
+bspc rule -a "Image Lounge" follow=on state=floating focus=on
+# Qute Browser
+bspc rule -a qutebrowser follow=on state=floating focus=on
+
 
 
 #window rules
@@ -85,3 +133,4 @@ bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Blueberry.py state=floating follow=on
 bspc rule -a Iwgtk state=floating follow=on
 bspc rule -a Steam desktop='^4' state=floating follow=on
+

@@ -217,7 +217,7 @@ export LESS_TERMCAP_se=$'\e[m'           # end standout-mode
 ##---------------------------------------------------------------#
 # FOR Android
 ##---------------------------------------------------------------#
-export JAVA_HOME="/usr/lib/jvm/java-16-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export ANDROID_HOME="$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk"
 export PATH="$PATH:$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk/platform-tools"
 export PATH="$PATH:$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk/tools/bin"
@@ -245,3 +245,4 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # for sdcv, command based dictionary
 export STARDICT_DATA_DIR="$HOME/codeDNA/confiFILES/system/apps/Dictionary/sdcv"
 #---------------------------------------------------------------#
+

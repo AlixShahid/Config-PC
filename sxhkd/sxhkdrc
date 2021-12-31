@@ -5,6 +5,8 @@
 # terminal emulator
 super + Return
 	tilix
+super + shift + Return
+	terminator
 
 # program launcher
 super + d
@@ -15,8 +17,8 @@ super + d
 # 	rofi -show power-menu -modi power-menu:rofi-power-menu
 
 # app switcher
-alt + tab
-	rofi -show window
+alt + Tab
+	rofi -show window -show-icons
 
 
 # #clipboard
