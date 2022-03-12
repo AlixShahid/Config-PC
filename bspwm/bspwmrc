@@ -31,24 +31,31 @@ $HOME/.config/polybar/launch.sh
 
 
 #set desktops
+# src -> https://fontawesome.com/v4.7/cheatsheet/
 # bspc monitor -d I II III IV V VI VII VIII IX
 # bspc monitor -d     ♪          
 # 𝟣 𝟤 𝟥 𝟦 𝟧 𝟨 𝟩 𝟪 𝟫
-bspc monitor -d   3 4  6 7  
+bspc monitor -d   3 4  6 7  
 
 
 #window settings
 bspc config border_width			1
 bspc config window_gap				10
 bspc config top_padding				10
+bspc config bottom_padding			-5
+# bspc config top_monocle_padding     10
+# bspc config bottom_monocle_padding  -5
+# bspc config left_monocle_padding    10
+# bspc config right_monocle_padding   10
+
 # colors
 bspc config normal_border_color  "#1C1C1C"
 bspc config urgent_border_color  "#ac8a8c"
 bspc config focused_border_color "#505555"
 
 bspc config split_ratio				0.5
-bspc config borderless_monocle		true
-bspc config gapless_monocle			true
+bspc config borderless_monocle		false
+bspc config gapless_monocle			false
 bspc config focus_follows_pointer	true
 
 # colors
@@ -62,14 +69,20 @@ bspc rule -a Gnome-calculator state=floating
 bspc rule -a mpv state=floating follow=on focus=on rectangle=1000x600+185+100
 
 bspc rule -a discord desktop='^7' follow=on focus=on
-bspc rule -a Telegram-desktop desktop='^7' follow=on focus=on
-bspc rule -a zoom desktop='^7' follow=on focus=on
+bspc rule -a Telegram-desktop desktop='^7' follow=on fstate=floating focus=on
+bspc rule -a TelegramDesktop desktop='^7' follow=on state=floating focus=on
+
+bspc rule -a zoom desktop='^7' follow=on state=floating focus=on
+bspc rule -a root desktop='^7' follow=on state=floating focus=on
+bspc rule -a Bspwm desktop='^7' follow=on state=floating focus=on
+
 bspc rule -a Caprine desktop='^7' state=floating focus=on
 
 bspc rule -a Eog state=floating follow=on focus=on
 bspc rule -a Sxiv state=floating follow=on focus=on
 bspc rule -a settings state=floating follow=on focus=on
-bspc rule -a Guvcview tate=floating follow=on focus=on
+bspc rule -a Guvcview state=floating follow=on focus=on
+bspc rule -a guvcview state=floating follow=on focus=on
 bspc rule -a Stremio desktop='^6' follow=on focus=on
 bspc rule -a Gpick state=floating focus=on
 bspc rule -a scrcpy state=floating focus=on
@@ -78,9 +91,11 @@ bspc rule -a scrcpy state=floating focus=on
 bspc rule -a xdman-Main state=floating focus=on
 # firefox pop-up window
 bspc rule -a firefox follow=on state=floating focus=on
+# tor browser
 bspc rule -a "Tor Browser" follow=on state=floating focus=on
 # brave
 bspc rule -a Brave-browser follow=on state=floating focus=on
+bspc rule -a brave-browser follow=on state=floating focus=on
 # dolphin
 bspc rule -a dolphin follow=on state=floating focus=on rectangle=666x724+150+50
 # color picker
@@ -91,13 +106,17 @@ bspc rule -a Wireshark follow=on state=floating focus=on
 # chrome
 bspc rule -a Chromium-browser follow=on state=floating focus=on
 # Virtual box
-bspc rule -a 'VirtualBox Manager' follow=on state=floating focus=on
-bspc rule -a 'VirtualBox Machine' follow=on state=floating focus=on
+bspc rule -a "VirtualBox Manager" follow=on state=floating focus=on
+bspc rule -a "VirtualBox Machine" follow=on state=floating focus=on
 # blender
 bspc rule -a Blender follow=on state=floating focus=on
 # Jupyter
 bspc rule -a urxvt follow=on state=floating focus=on
 bspc rule -a URxvt follow=on state=floating focus=on
+# sublime
+bspc rule -a subl follow=on state=floating focus=on
+bspc rule -a Subl follow=on state=floating focus=on
+
 # xterm
 bspc rule -a xterm follow=on state=floating focus=on
 bspc rule -a XTerm follow=on state=floating focus=on
@@ -123,6 +142,19 @@ bspc rule -a nomacs follow=on state=floating focus=on
 bspc rule -a "Image Lounge" follow=on state=floating focus=on
 # Qute Browser
 bspc rule -a qutebrowser follow=on state=floating focus=on
+# krita
+bspc rule -a krita qutefollow=on state=floating focus=on
+# QT
+bspc rule -a qtcreator qutefollow=on state=floating focus=on
+bspc rule -a QtCreator qutefollow=on state=floating focus=on
+# Logisim
+bspc rule -a com-cburch-logisim-Main follow=on state=floating focus=on
+# Pensela -- drawing on screen app
+bspc rule -a pensela follow=on state=floating focus=on
+
+
+# other
+bspc rule -a Untitled follow=on state=floating focus=on
 
 
 

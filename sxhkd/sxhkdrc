@@ -1,10 +1,12 @@
+#!/bin/sh
+
 #
 # wm independent hotkeys
 #
 
 # terminal emulator
 super + Return
-	tilix
+	alacritty
 super + shift + Return
 	terminator
 
