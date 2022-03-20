@@ -96,8 +96,17 @@ super + S
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+super + {h, j, k, l}
+	bspc node -f {west,south,north,east}
+
+
+# move the focused window in the given direction
+ctrl + shift + {h, j, k, l}
+	bspc node -s {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + shift + Escape
+	bspc node -p cancel
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -130,16 +139,13 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + shift + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
@@ -211,4 +217,5 @@ super + q
 
 # load startup script
 F8
-  bash $HOME/codeDNA/confiFILES/system/makeEasy/startUP.sh
+  bash $HOME/storeDrive/storeDriveBig/codeDNA/confiFILES/system/makeEasy/startUP.sh
+
