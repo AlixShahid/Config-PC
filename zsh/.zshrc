@@ -107,7 +107,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -246,5 +246,20 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export STARDICT_DATA_DIR="$HOME/storeDrive/storeDriveBig/codeDNA/confiFILES/system/apps/Dictionary/sdcv"
 # disaable .NET Telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+#---------------------------------------------------------------#
+
+# Default browser
+export BROWSER=chromium
+
+## don't check for git status/to avoid slowness
+# # src: https://gist.github.com/msabramo/2355834
+# function git_prompt_info() {
+#   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+#   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+# }
+#---------------------------------------------------------------#
+# testing
+#---------------------------------------------------------------#
+# export  ~/storeDrive/storeDriveBig/codeDNA/confiFILES/testing/webdrive/chromium
 #---------------------------------------------------------------#
 
