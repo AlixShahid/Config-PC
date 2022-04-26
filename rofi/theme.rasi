@@ -29,6 +29,9 @@
   background-color: transparent;
 
   font: "Overpass Bold 13";
+  columns: 2;
+  /* width: 9; */
+  height: 500;
   text-color: @text;
 }
 
