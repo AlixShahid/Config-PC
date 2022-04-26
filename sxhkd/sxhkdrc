@@ -51,8 +51,10 @@ XF86Mail
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+ctrl + super + shift + backspace + q
+	bspc quit
+super + alt + r
+	bspc wm -r
 
 # close and kill
 super + shift + {_,ctrl + }c
@@ -205,7 +207,7 @@ F1
 	  light -U 1
 
 # close window
-super + shift + q
+super + alt + q
   bspc node -c
 # kill window
 
