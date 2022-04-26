@@ -1,3 +1,4 @@
+
 #icons options =>     墳 奄 奔 ﱜ ﱝ 婢 ﱛ 奔,墳
 # current_volume=$(pactl list sinks | grep -o '[0-9]*' | awk 'NR==11')
 
