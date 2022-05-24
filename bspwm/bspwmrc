@@ -15,14 +15,19 @@ xset s off
 #--------Wallpaper
 xwallpaper --focus ~/.config/Wallpaper/wall.jpg
 
+# fix cursor shape
+xsetroot -cursor_name left_ptr
+
 # to fix java applications
 wmname LG3D
+# to fix Android Studio
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # change default tmp dir
 export TMPDIR="$HOME/storeDrive/storeDriveBig/Temp"
 
 
-launch sxhkd
+# launch sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # for Notifications
@@ -31,14 +36,24 @@ dunst &
 #launch polybar
 $HOME/.config/polybar/launch.sh
 
+##############TESTING#################
+## for HDMI
+## https://www.youtube.com/watch?v=FAimFhf84QI
+## https://www.reddit.com/r/archlinux/comments/1xx7d9/some_help_with_configuring_bspwm_multiple/
 
+# if [[ $(xrandr -q | grep 'HDMI-1 connected') ]]; then
+# 	xrandr --output eDP-1 --primary --mode 1366x768 --rotate normal --output HDMI-1 --mode 1366x768 --rotate normal
+# fi
+# bspc monitor eDP-1 -n 0 -d   3 4  6 7  
+# bspc monitor HDMI-1 -n 0 -d   3 4  6 7  
+##############TESTING#################
 
 #set desktops
 # src -> https://fontawesome.com/v4.7/cheatsheet/
 # bspc monitor -d I II III IV V VI VII VIII IX
 # bspc monitor -d     ♪          
 # 𝟣 𝟤 𝟥 𝟦 𝟧 𝟨 𝟩 𝟪 𝟫
-bspc monitor -d   3 4  6 7  
+bspc monitor -d   3 4  6   
 
 
 #window settings
