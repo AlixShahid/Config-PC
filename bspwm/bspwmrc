@@ -106,9 +106,15 @@ bspc rule -a Gpick state=floating focus=on
 bspc rule -a scrcpy state=floating focus=on
 
 # XDM
-bspc rule -a xdman-Main state=floating focus=on
+bspc rule -a xdman-Main state=floatinga follow=on focus=on
 # firefox pop-up window
-bspc rule -a firefox follow=on state=floating focus=on
+bspc rule -a firefox follow=on state=floating focus=on rectangle=1330x724+35+50 # width+height+left/right+top/bottom
+
+# thunderbird
+bspc rule -a Thunderbird desktop='^7' follow=on focus=on
+bspc rule -a Mail desktop='^7' state=floating follow=on focus=on
+bspc rule -a Msgcompose state=floating follow=on focus=on
+
 # tor browser
 bspc rule -a "Tor Browser" follow=on state=floating focus=on
 # brave
