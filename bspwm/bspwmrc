@@ -108,7 +108,7 @@ bspc rule -a scrcpy state=floating focus=on
 # XDM
 bspc rule -a xdman-Main state=floatinga follow=on focus=on
 # firefox pop-up window
-bspc rule -a firefox follow=on state=floating focus=on rectangle=1330x724+35+50 # width+height+left/right+top/bottom
+bspc rule -a firefox follow=on focus=on
 
 # thunderbird
 bspc rule -a Thunderbird desktop='^7' follow=on focus=on
