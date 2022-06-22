@@ -131,9 +131,9 @@ plugins=(
     zsh-syntax-highlighting
     extract
     virtualenv
-    history-substring-search
+    # history-substring-search
     vi-mode
-    z
+    # z
     copyfile
 )
 
@@ -192,6 +192,15 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # for vi-mode plugin
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
+#---------------------------------------------------------------#
+
+
+
+#---------------------------------------------------------------#
+# A command line tool which helps you navigate faster by learning your habits
+# https://github.com/skywind3000/z.lua
+eval "$(lua $HOME/codeDNA/confiFILES/system/apps/z/z.lua --init zsh)"
+source $HOME/codeDNA/confiFILES/system/apps/z/czmod/czmod.zsh
 #---------------------------------------------------------------#
 
 
