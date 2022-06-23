@@ -107,7 +107,9 @@ bspc rule -a Gpick state=floating focus=on
 bspc rule -a scrcpy state=floating focus=on
 
 # XDM
-bspc rule -a xdman-Main state=floatinga follow=on focus=on
+bspc rule -a xdman-Main state=floating follow=on focus=on
+
+
 # firefox pop-up window
 bspc rule -a firefox follow=on focus=on
 
