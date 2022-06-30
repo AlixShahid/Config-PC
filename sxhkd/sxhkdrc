@@ -33,13 +33,18 @@ alt + Tab
 
 #screenshot
 Print
-		flameshot gui -p $HOME/storeDrive/storeDriveBig/Pictures/ScreenShots/flameShot/
+		flameshot gui
+		# flameshot gui -p $HOME/storeDrive/storeDriveBig/Media/Pictures/ScreenShots/flameShot/
 shift + Print
-		flameshot full -p $HOME/storeDrive/storeDriveBig/Pictures/ScreenShots/flameShot/
+		flameshot full
+		# flameshot full -p $HOME/storeDrive/storeDriveBig/Media/Pictures/ScreenShots/flameShot/
 
 # Email
-XF86Mail
-  firefox --no-remote -P E-mail
+Mail
+  thunderbird
+# Browser
+Home
+  firefox
 
 
 # # make sxhkd reload its configuration files:
@@ -51,7 +56,7 @@ XF86Mail
 #
 
 # quit/restart bspwm
-ctrl + super + shift + backspace + q
+ctrl + super + shift + BackSpace + q
 	bspc quit
 super + alt + r
 	bspc wm -r
