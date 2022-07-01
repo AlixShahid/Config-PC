@@ -172,6 +172,7 @@ alias la='exa -aah --group-directories-first'
 alias ll='exa -FlHg --group-directories-first'
 alias l='exa -FlHgaa --group-directories-first'
 alias gc='git clone'
+alias logout='bspc quit'
 #---------------------------------------------------------------#
 #		end of OH MY ZSH
 #---------------------------------------------------------------#
