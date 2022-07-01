@@ -56,8 +56,8 @@ Home
 #
 
 # quit/restart bspwm
-ctrl + super + shift + BackSpace + q
-	bspc quit
+ctrl + super + shift + BackSpace
+	bspc quir
 super + alt + r
 	bspc wm -r
 
@@ -217,7 +217,7 @@ super + alt + q
 # kill window
 
 ctrl + shift + super + q
-  xkill
+	xkill
 
 super + q
 	echo "wow"
