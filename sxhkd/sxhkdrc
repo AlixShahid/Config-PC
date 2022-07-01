@@ -57,7 +57,7 @@ Home
 
 # quit/restart bspwm
 ctrl + super + shift + BackSpace
-	bspc quir
+	bspc quit
 super + alt + r
 	bspc wm -r
 
