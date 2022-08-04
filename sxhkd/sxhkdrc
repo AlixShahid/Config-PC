@@ -191,11 +191,14 @@ super + control + p {
 
 # volume
 XF86AudioLowerVolume
-	  pactl set-sink-volume 0 -5%; killall -q polybar && polybar --reload bspwm &
+	pactl set-sink-volume @DEFAULT_SINK@ -5%; killall -q polybar && polybar --reload bspwm &
+	# pactl set-sink-volume 0 -5%; killall -q polybar && polybar --reload bspwm &
 XF86AudioRaiseVolume
-	  pactl set-sink-volume 0 +5% ; killall -q polybar && polybar --reload bspwm &
+	pactl set-sink-volume @DEFAULT_SINK@ +5%; killall -q polybar && polybar --reload bspwm &
+	# pactl set-sink-volume 0 +5% ; killall -q polybar && polybar --reload bspwm &
 XF86AudioMute
-	  pactl set-sink-mute 0 toggle ; killall -q polybar && polybar --reload bspwm &
+	pactl set-sink-mute @DEFAULT_SINK@ toggle; killall -q polybar && polybar --reload bspwm &
+	# pactl set-sink-mute 0 toggle ; killall -q polybar && polybar --reload bspwm &
 
 # screen lock
 super + x
