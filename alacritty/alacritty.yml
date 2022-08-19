@@ -111,7 +111,8 @@ scrolling:
 font:
   normal:
     # family: monospace
-    family: DroidSansMono Nerd Font
+    family: JetBrains Mono
+    # family: DroidSansMono Nerd Font
     # family: Source Code Pro
     # family: Camingo Code
     # family: Iosevka
