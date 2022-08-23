@@ -75,7 +75,11 @@ bspc config focused_border_color    "#505555"
 bspc config split_ratio				0.55
 bspc config borderless_monocle		false
 bspc config gapless_monocle			false
-bspc config focus_follows_pointer	true
+bspc config focus_follows_pointer	false
+
+bspc config automatic_scheme spiral
+bspc config removal_adjustment true
+bspc config initial_polarity first_child
 
 # colors
 #source ~/.config/bspwm/theme
@@ -97,7 +101,7 @@ bspc rule -a zoom desktop='^7' follow=on state=floating focus=on
 bspc rule -a root desktop='^7' follow=on state=floating focus=on
 bspc rule -a Bspwm desktop='^7' follow=on state=floating focus=on
 
-bspc rule -a Caprine desktop='^7' state=floating focus=on
+bspc rule -a Caprine desktop='^7' state=floating focus=on rectangle=519x729+835+32
 
 bspc rule -a Eog state=floating follow=on focus=on
 bspc rule -a Sxiv state=floating follow=on focus=on
