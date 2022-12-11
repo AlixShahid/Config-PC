@@ -200,7 +200,7 @@ VI_MODE_SET_CURSOR=true
 #---------------------------------------------------------------#
 # A command line tool which helps you navigate faster by learning your habits
 # https://github.com/skywind3000/z.lua
-eval "$(lua $HOME/codeDNA/confiFILES/system/apps/z/z.lua --init zsh)"
+eval "$(lua $HOME/codeDNA/confiFILES/system/apps/z/z.lua/z.lua --init zsh)"
 source $HOME/codeDNA/confiFILES/system/apps/z/czmod/czmod.zsh
 #---------------------------------------------------------------#
 
@@ -228,10 +228,13 @@ export LESS_TERMCAP_se=$'\e[m'           # end standout-mode
 ##---------------------------------------------------------------#
 # FOR Android
 ##---------------------------------------------------------------#
-export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export ANDROID_HOME="$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk"
-export PATH="$PATH:$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk/platform-tools"
-export PATH="$PATH:$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk/tools/bin"
+export ANDROID_SDK_ROOT="$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin"
+
 
 # FOR FLUTTER
 export PATH="$PATH:$HOME/codeDNA/confiFILES/appFrameWorkModule/flutter/bin"
