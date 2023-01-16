@@ -1,0 +1,29 @@
+
+;           -> nerd font and Phosphor Icons required
+; 🛰 📻 🌐 ✈ 💻
+
+
+(defwidget network [] (
+  box :class "network"
+      :tooltip wifiName
+  (label :text {
+      strength == ""? "睊":
+      strength < 26 ? "直":
+      strength < 51 ? "直":
+      strength < 70 ? "直": "直"
+    }
+  )
+))
+
+( defpoll wifiName
+  :interval "20s"
+  :initial `N/A`
+  `nmcli | grep '^wlp' | sed 's/\ connected\ to\ /Connected to /g' | cut -d ':' -f2`
+)
+
+( defpoll strength
+  :interval "10s"
+  :initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi | awk -F':' '{if($2=="yes")print$1}'`
+)
+

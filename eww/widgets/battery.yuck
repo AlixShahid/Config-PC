@@ -1,0 +1,28 @@
+
+; NOTE: nerd font and Phosphor Icons required.
+; https://github.com/phosphor-icons/web/tree/master/src/fonts
+;              -> these fonts could look different if proper font is not installed
+; 
+
+(defwidget battery [battery status] (
+  box :class "battery"
+      :tooltip {
+        status == 'Discharging' ?
+        "${battery}% Battery level"
+        :
+        "${battery}%  Pluged in"
+      }
+  (label :text {
+    status == 'Charging' ?
+      battery < 20 ? " ":
+      battery < 35 ? " ":
+      battery < 60 ? " ":
+      battery < 90 ? " ": " "
+      :
+      battery < 20 ? " ":
+      battery < 35 ? " ":
+      battery < 60 ? " ":
+      battery < 90 ? " ": " "
+    }
+  )
+))

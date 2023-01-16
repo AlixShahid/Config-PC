@@ -1,0 +1,4 @@
+( defpoll datetime
+  :interval "20s"
+  "date '+%a, %d-%b-%Y, %l:%M %p'"
+)

@@ -1,0 +1,4 @@
+( defwidget menu [] (
+    box :class "menu" :orientation "horizontal"
+    (button :onclick "nwg-menu &" "  Menu")
+))

@@ -1,0 +1,48 @@
+
+; author -> https://github.com/rxyhn/tokyo/blob/main/config/eww/bar/eww.yuck
+
+(defwidget brightness [] (
+	eventbox
+		:onhover "eww update bright=true"
+		:onhoverlost "eww update bright=false"
+
+	( box
+		:tooltip "Brightness ${current-brightness}%"
+		:class "brightness"
+		:orientation "h"
+		:space-evenly "false"
+
+
+		(revealer
+			:transition "slideup"
+			:reveal bright
+			:duration "550ms"
+
+			(scale :class "brightness-bar"
+					:value current-brightness
+					:tooltip "Brightness: ${current-brightness}%"
+					:onchange "brightnessctl set {}%"
+					:orientation "h"
+					:flipped true
+					:min 0
+					:max 101
+			)
+		)
+		(label
+			:class "brightness-icon"
+			:text {
+				current-brightness < 25? "":
+				current-brightness < 50? "":
+				current-brightness < 75? " ":
+				current-brightness < 90? " ": " "
+			}
+		)
+	)
+))
+
+( defpoll current-brightness
+	:interval "30s"
+	"brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'"
+)
+
+(defvar bright false)

@@ -1,0 +1,78 @@
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.hyprbar {
+    all: unset;
+    color: #b0b4bc;
+    background-color: #3a3a3a;
+}
+
+.left-section {
+    .workspaces {
+        // background-color: #ff6666;
+        all: unset;
+        font-size: 16;
+        color: #888888;
+        padding: 0 4px;
+
+        .workspace_item {
+            padding: 0 5px;
+
+            &:hover {
+                color: #d35d6e;
+            }
+        }
+
+        .workspaces_active {
+            color: #ffffff;
+        }
+
+        .current_active_ws {
+            all: unset;
+            padding-left: 4px;
+            color: #eeeeee;
+            background-color: #0066cc;
+        }
+    }
+}
+
+.center-section {
+    .datetime {
+        color: #eeeeee;
+        font-size: 14;
+    }
+}
+
+.right-section {
+    all: unset;
+    font-size: 14px;
+    padding-right: 1rem;
+
+    .menu {
+        margin-right: 1rem;
+        font-size: 15px;
+    }
+
+    .network {
+    }
+
+    .battery {
+    }
+
+    .brightness {
+        margin-right: 0.1px;
+    }
+    .volume {
+        all: unset;
+
+        .volume-icon {
+            margin-right: 3px;
+        }
+    }
+    .power {
+        margin-left: 18px;
+        color: #ff0000;
+    }
+}

@@ -1,0 +1,22 @@
+(defwidget volume [] (
+	eventbox :onhover "eww update vol=true" :onhoverlost "eww update vol=false"
+	( box
+		:orientation "h"
+		:class "volume"
+		( button
+			:onclick "pavucontrol &"
+			:class "volume-icon"
+			{
+				isMute=="yes"? "ﱝ"
+				:
+				current-volume < 40? "${current-volume}% 奔" : "${current-volume}% 墳"
+			}
+		)
+	)
+))
+
+(defpoll current-volume :interval "2s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll isMute :interval "2s" "pactl list sinks | grep 'Mute:' | awk '{print $2}'")
+(defvar vol false)
+
+

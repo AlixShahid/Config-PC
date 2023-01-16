@@ -1,0 +1,13 @@
+
+(defwidget power [] (
+    box
+      :class "power" :spacing 8
+    (button :onclick "command for reboot" "")
+    (button :onclick "command for logout" "")
+    (button :onclick "commannd for shutdown" "⏻")
+))
+
+
+; (power :shutdown "poweroff" :reboot "reboot"
+;                :logout "loginctl kill-session self"
+;                :shutdown_icon "" :reboot_icon "" :logout_icon "")))
