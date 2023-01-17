@@ -68,7 +68,6 @@
         :halign "end"
         :space-evenly "false"
 
-    (menu)
     (volume)
     (brightness)
     (battery :status {EWW_BATTERY.BAT0.status} :battery {EWW_BATTERY.BAT0.capacity})
@@ -78,7 +77,6 @@
 
 (include "./widgets/battery.yuck")
 (include "./widgets/network.yuck")
-(include "./widgets/menu.yuck")
 (include "./widgets/power.yuck")
 (include "./widgets/brightness.yuck")
 (include "./widgets/volume.yuck")

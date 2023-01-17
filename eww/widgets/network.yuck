@@ -5,7 +5,7 @@
 
 (defwidget network [] (
   box :class "network"
-      :tooltip wifiName
+      :tooltip "${wifiName} | strength ${strength}% "
   (label :text {
       strength == ""? "睊":
       strength < 26 ? "直":
