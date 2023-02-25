@@ -2,6 +2,7 @@
 
 
 # start top-bar
+# https://github.com/lbonn/rofi#wayland-support
 eww daemon && eww open hyprbar&
 
 # ## to fix java applications
