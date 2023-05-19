@@ -3,7 +3,9 @@
 
 # start top-bar
 # https://github.com/lbonn/rofi#wayland-support
-eww daemon && eww open hyprbar&
+# eww daemon && eww open hyprbar&
+
+waybar&
 
 # ## to fix java applications
 # # wmname LG3D

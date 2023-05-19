@@ -1,20 +1,33 @@
 {
     "layer": "top",      // Waybar at top layer
     "position": "top",   // Waybar position (top|bottom|left|right)
-    "height": 20,        // Waybar height (to be removed for auto height)
+    "height": 24,        // Waybar height (to be removed for auto height)
     // "width": 1280,    // Waybar width
     "spacing": 2,        // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
-    "modules-center": ["clock", "wlr/window"],
-    "modules-right": ["tray", "pulseaudio", "network",  "backlight", "battery"],
+    "modules-left": ["wlr/workspaces"],
+    // "modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "battery", "network"],
     // Modules configuration
     "wlr/workspaces": {
         // "disable-scroll": "true",
         "on-click": "activate", // enable Clicking on a workspace
 
-        "active-only": false,
-        "all-outputs": true,
+       // "active-only": false,
+        //"all-outputs": true,
+
+        "persistent_workspaces": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+        },
 
         "format": "{icon}",
         "format-icons": {
@@ -23,14 +36,15 @@
             "3": "3",
             "4": "4",
             "5": "",
-            "6": "",
+            "6": "6",
             "7": " ",
             "8": " ",
             "9": " ",
             "urgent": "",
             "focused": "",
             "default": ""
-        }
+        },
+
     },
     "keyboard-state": {
         "numlock": true,
@@ -41,9 +55,9 @@
             "unlocked": ""
         }
     },
-    "wlr/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+    // "wlr/mode": {
+    //     "format": "<span style=\"italic\">{}</span>"
+    // },
     "wlr/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -90,6 +104,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%a, %d-%b-%Y, %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -110,44 +125,52 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
+        // "format": "{percent}% {icon}",
         // "format-icons": ["", "", "", "", "", "", "", "", " "]
         "format-icons": ["", "", " ", " ", " "]
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% {icon} ",
+        "format-plugged": "{capacity}% {icon} ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
+
+        // "format-charging": "{capacity}% ",
+        // "format-plugged": "{capacity}% ",
+        // "format-alt": "{time} {icon}",
+        // "format-icons": ["", "", "", "", "", "", "", "", "", ""],
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-wifi": " ",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} 🌐",
+        "tooltip-format": "Connection: {essid}\nStrength:      {signalStrength}%\nInterface:     {ifname}\nIP:                {ipaddr}\nGateway:     {gwaddr}",
+        // "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{volume}% {icon} {format_source}",
+        "format-muted": "{volume}% ﱝ",
+        // "format-source": "{volume}% ",
+        // "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -159,17 +182,5 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
 }
 
