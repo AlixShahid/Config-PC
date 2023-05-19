@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 200;
 }
 
@@ -69,7 +69,8 @@ button:hover {
     /* background-color: #64727d; */
     /* box-shadow: inset 0 -2px #ffffff; */
     background-color: #1c91ff;
-    color: #ffffff;
+    color: #000000;
+    padding: 0 4;
 }
 
 #workspaces button.urgent {
@@ -99,6 +100,7 @@ button:hover {
 #mpd {
     padding: 0 8px;
     color: #DDDDDD;
+    font-size: 13px;
 }
 
 #window,
