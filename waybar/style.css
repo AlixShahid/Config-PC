@@ -1,8 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 window#waybar {
@@ -20,7 +20,6 @@ window#waybar.hidden {
 /* workspace having no active window */
 #workspaces button.persistent {
     color: #888888;
-    font-size: 18px;
 }
 
 /*
@@ -71,6 +70,8 @@ button:hover {
     background-color: #1c91ff;
     color: #000000;
     padding: 0 4px;
+    margin: inherit;
+    /* padding: 0 4px; */
 }
 
 #workspaces button.urgent {
@@ -100,7 +101,7 @@ button:hover {
 #mpd {
     padding: 0 8px;
     color: #DDDDDD;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #window,
