@@ -126,6 +126,7 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon}",
+        "tooltip-format": "Current Brightness: {percent}%",
         // "format": "{percent}% {icon}",
         // "format-icons": ["", "", "", "", "", "", "", "", " "]
         "format-icons": ["", "", " ", " ", " "]
@@ -140,6 +141,7 @@
         "format-charging": "{capacity}% {icon} ",
         "format-plugged": "{capacity}% {icon} ",
         "format-alt": "{time} {icon}",
+        "tooltip-format": "Current Capacity:\t{capacity}%\nFull/Empty Time:\t{time}\nPower:\t\t\t{power} watts\n",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -158,7 +160,7 @@
         // "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "🌐 ",
         // "format-ethernet": "{ipaddr}/{cidr} 🌐",
-        "tooltip-format": "Connection: {essid}\nStrength:     {signalStrength}%\nInterface:     {ifname}\nIP:                 {ipaddr}\nGateway:     {gwaddr}",
+        "tooltip-format": "Connection:\t{essid}\nStrength:\t\t{signalStrength}%\nInterface:\t\t{ifname}\nIP Address:\t{ipaddr}\nGateway:\t\t{gwaddr}",
         // "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "睊 ",
@@ -167,15 +169,15 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{volume}% {icon}",
         "format-muted": "{volume}% ﱝ",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
