@@ -10,7 +10,7 @@ window#waybar {
     /* border-bottom: 1px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
@@ -57,7 +57,7 @@ button:hover {
 #workspaces button {
     padding: 0 6px;
     background-color: transparent;
-    color: #EEEEEE;
+    color: #eeeeee;
 }
 
 /* #workspaces button:hover { */
@@ -100,7 +100,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 8px;
-    color: #DDDDDD;
+    color: #dddddd;
     font-size: 13px;
 }
 
@@ -130,14 +130,18 @@ button:hover {
     /* background-color: #ffffff; */
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     /* background-color: #26A65B; */
 }
 
 @keyframes blink {
+    from {
+        color: #ff6666;
+    }
     to {
         /* background-color: #ffffff; */
-        color: #000000;
+        color: #ffffff;
     }
 }
 
@@ -286,5 +290,5 @@ label:focus {
 }
 
 #scratchpad.empty {
-	/* background-color: transparent; */
+    /* background-color: transparent; */
 }
