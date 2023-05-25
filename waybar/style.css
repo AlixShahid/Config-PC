@@ -224,6 +224,7 @@ label:focus {
 
 #tray {
     /* background-color: #2980b9; */
+    margin-right: 50px;
 }
 
 #tray > .passive {
