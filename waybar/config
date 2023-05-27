@@ -1,3 +1,6 @@
+
+// Nerd Fonts required. https://www.nerdfonts.com/cheat-sheet
+
 {
     "layer": "top",      // Waybar at top layer
     "position": "top",   // Waybar position (top|bottom|left|right)
@@ -5,7 +8,7 @@
     // "width": 1280,    // Waybar width
     "spacing": 2,        // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["wlr/workspaces", "hyprland/window"],
     // "modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "pulseaudio", "backlight", "battery", "network"],
@@ -155,23 +158,24 @@
         "bat": "BAT2"
     },
     "network": {
+        // icons:  睊🌐
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " ",
-        // "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "🌐 ",
         // "format-ethernet": "{ipaddr}/{cidr} 🌐",
-        "tooltip-format": "Connection:\t{essid}\nStrength:\t\t{signalStrength}%\nInterface:\t\t{ifname}\nIP Address:\t{ipaddr}\nGateway:\t\t{gwaddr}",
-        // "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "睊 ",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "{icon} ",
+        "format-ethernet": "🌐 ",
+        "tooltip-format": "Connection:\t{essid}\nStrength:\t\t{signalStrength}%\nInterface:\t\t{ifname}\nIP Address:\t{ipaddr}\nGateway:\t\t{gwaddr}",
+        "tooltip-format-disconnected": "wifi is disconnected",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰤮 ",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
+        "format-muted": "{volume}% 󰖁",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "{volume}% {icon}",
-        "format-muted": "{volume}% ﱝ",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
         "format-icons": {
@@ -181,9 +185,14 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "", "󰕾", ""]
         },
         "on-click": "pavucontrol"
     },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 30,
+        "tooltip": false
+    }
 }
 

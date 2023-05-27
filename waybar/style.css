@@ -176,6 +176,7 @@ label:focus {
 
 #network {
     /* background-color: #2980b9; */
+    font-size: 14px;
 }
 
 #network.disconnected {
@@ -292,4 +293,9 @@ label:focus {
 
 #scratchpad.empty {
     /* background-color: transparent; */
+}
+
+/* for hyprland */
+#window {
+    color: #888888;
 }
