@@ -22,7 +22,7 @@
 
         // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland#persistent-workspaces
         "persistent_workspaces": {
-            "*": 9,        // 9 workspaces by default on every monitor
+            "*": 10,        // 10 workspaces by default on every monitor
 
             // "1": [
             //     "DP-3"      // workspace 1 shown on DP-3
@@ -34,15 +34,16 @@
 
         "format": "{icon}",
         "format-icons": {
-            "1": " ",
-            "2": " ",
-            "3": "3",
+            "1": " ",
+            "2": " ",
+            "3": " ",
             "4": "4",
             "5": "",
             "6": "6",
-            "7": " ",
-            "8": " ",
-            "9": " ",
+            "7": "7",
+            "8": "8",
+            "9": " ",
+            "10": " ",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -127,12 +128,14 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
+        // 🔅 🔆 🌑 🌒 🌓 🌔 🌕
+        // "", "", "", "", "", "", "", "", " "
+
         // "device": "acpi_video1",
         "format": "{icon}",
         "tooltip-format": "Current Brightness: {percent}%",
         // "format": "{percent}% {icon}",
-        // "format-icons": ["", "", "", "", "", "", "", "", " "]
-        "format-icons": ["", "", " ", " ", " "]
+        "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕", "🔆"]
     },
     "battery": {
         "states": {
