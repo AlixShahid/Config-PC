@@ -17,11 +17,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/* workspace having no active window */
-#workspaces button.persistent {
-    color: #888888;
-}
-
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -63,6 +58,16 @@ button:hover {
 /* #workspaces button:hover { */
 /*     background: rgba(0, 0, 0, 0.2); */
 /* } */
+
+/* workspace having active window */
+#workspaces button.persistent {
+    color: #ffffff;
+}
+
+/* workspace having no active window */
+#workspaces button.empty {
+    color: #888888;
+}
 
 #workspaces button.active {
     /* background-color: #64727d; */
