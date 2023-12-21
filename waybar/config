@@ -11,7 +11,7 @@
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     // "modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "backlight", "battery", "network"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network"],
     // Modules configuration
     "hyprland/workspaces": {
         // "disable-scroll": "true",
@@ -21,7 +21,7 @@
         //"all-outputs": true,
 
         // https://github.com/Alexays/Waybar/wiki/Module:-Hyprland#persistent-workspaces
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "*": 10,        // 10 workspaces by default on every monitor
 
             // "1": [
