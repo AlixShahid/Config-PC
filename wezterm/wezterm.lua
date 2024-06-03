@@ -8,7 +8,7 @@ return {
 	-- Fonts
 	font = wezterm.font("JetBrains Mono"), -- [JetBrains Mono]
 	-- font  	= wezterm.font("JetBrains Mono", {weight="Bold",italic=true})	, -- [JetBrains Mono] Name with parameters
-	font_size = 12.0, -- [12.0]
+	font_size = 12.9, -- [12.0]
 
 	-- Colors
 	color_scheme = "nord", -- full list @ wezfurlong.org/wezterm/colorschemes/index.html

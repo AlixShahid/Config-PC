@@ -1,0 +1,149 @@
+live_config_reload = true
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#2189ff"
+cyan = "#8abeb7"
+green = "#396d41"
+magenta = "#b294bb"
+red = "#cb4b16"
+white = "#FFFFFF"
+yellow = "#ab774c"
+
+[colors.primary]
+background = "#060606"
+foreground = "#c5c8c6"
+
+[cursor]
+blink_interval = 1000
+thickness = 0.23
+unfocused_hollow = true
+vi_mode_style = "Block"
+
+[cursor.style]
+blinking = "Off"
+shape = "Beam"
+
+[font]
+size = 12
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Copy"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "K"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "J"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Home"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "End"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageUp"
+key = "U"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageDown"
+key = "D"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Slash"
+mods = "control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "NumpadAdd"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Escape"
+mods = "Command|Alt"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F"
+mods = "Command|Control"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[window]
+dynamic_title = true
+opacity = 0.7

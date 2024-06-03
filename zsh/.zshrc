@@ -224,3 +224,9 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 # # dart
 # export PATH="$PATH":"$HOME/.pub-cache/bin"
 ##---------------------------------------------------------------#
+
+# BUN: https://bun.sh/docs/installation#checking-installation
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "/home/shaeins7/.bun/_bun" ] && source "/home/shaeins7/.bun/_bun"

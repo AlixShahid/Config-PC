@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background-color: #383838;
+    background-color: #0E0E0E;
     /* border-bottom: 1px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
@@ -132,7 +132,7 @@ button:hover {
 }
 
 #battery {
-    /* background-color: #ffffff; */
+    background-color: #0E0E0E;
 }
 
 #battery.charging,

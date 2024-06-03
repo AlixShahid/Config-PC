@@ -9,7 +9,7 @@
     "spacing": 2,        // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    // "modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
+    //"modules-left": ["wlr/workspaces", "wlr/mode", "wlr/scratchpad", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network"],
     // Modules configuration
@@ -36,14 +36,25 @@
         "format-icons": {
             "1": " ",
             "2": " ",
-            "3": " ",
+            "3": "☬ ",
             "4": "4",
-            "5": "",
+            "5": " ",
             "6": "6",
             "7": "7",
             "8": "8",
             "9": " ",
             "10": " ",
+            // For external monitor
+            "11": " ",
+            "12": " ",
+            "13": "☬ ",
+            "14": "4",
+            "15": " ",
+            "16": "6",
+            "17": "7",
+            "18": "8",
+            "19": " ",
+            "20": " ",
             "urgent": "",
             "focused": "",
             "default": ""
