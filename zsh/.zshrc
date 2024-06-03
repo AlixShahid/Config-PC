@@ -1,12 +1,3 @@
-
-#----------------------------------------------------------------#
-#		Tilix Setting
-##---------------------------------------------------------------#
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-#----------------------------------------------------------------#
-
 # Prevent from closing Terminal when Pressing ctrl+D
 set -o ignoreeof
 
@@ -19,18 +10,8 @@ set -o ignoreeof
 #----------------------------------------------------------------#
 #so as not to be disturbed by Ctrl-S ctrl-Q in vim
 stty -ixon
-
 #----------------------------------------------------------------#
 
-
-#----------------------------------------------------------------#
-##to use KDE in every window manager
-# XDG_CURRENT_DESKTOP=KDE
-#----------------------------------------------------------------#
-
-#--------Don't let computer sleep
-xset s 0 0
-xset s off
 
 #---------------------------------------------------------------#
 #			HISTORY
@@ -169,8 +150,9 @@ export EDITOR='nvim'
 # alias la='ls -a'
 alias ls='exa --group-directories-first'
 alias la='exa -aah --group-directories-first'
-alias ll='exa -FlHg --group-directories-first'
-alias l='exa -FlHgaa --group-directories-first'
+alias ll='exa -lHg --group-directories-first'
+alias l='exa -lHgaa --group-directories-first'
+alias lt='exa --tree'
 alias gc='git clone'
 alias logout='bspc quit'
 #---------------------------------------------------------------#
@@ -217,8 +199,6 @@ export LESS_TERMCAP_so=$'\e[0;15;41m'    # begin standout-mode - info box
 export LESS_TERMCAP_me=$'\e[m'           # end mode
 export LESS_TERMCAP_ue=$'\e[m'           # end underline
 export LESS_TERMCAP_se=$'\e[m'           # end standout-mode
-
-
 #---------------------------------------------------------------#
 #---------------------------------------------------------------#
 
@@ -228,9 +208,10 @@ export LESS_TERMCAP_se=$'\e[m'           # end standout-mode
 ##---------------------------------------------------------------#
 # FOR Android
 ##---------------------------------------------------------------#
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export ANDROID_HOME="$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk"
 export ANDROID_SDK_ROOT="$HOME/codeDNA/confiFILES/editor_AND_ide/androidStudio/Sdk"
+export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
 export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin"
@@ -243,32 +224,3 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 # # dart
 # export PATH="$PATH":"$HOME/.pub-cache/bin"
 ##---------------------------------------------------------------#
-
-
-
-#---------------------------------------------------------------#
-# OTHERS
-#---------------------------------------------------------------#
-# for Aria2 config location
-export XDG_CONFIG_HOME="$HOME/.config"
-# for sdcv, command based dictionary
-export STARDICT_DATA_DIR="$HOME/storeDrive/storeDriveBig/codeDNA/confiFILES/system/apps/Dictionary/sdcv"
-# disaable .NET Telemetry
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-#---------------------------------------------------------------#
-
-# Default browser
-export BROWSER=chromium
-
-## don't check for git status/to avoid slowness
-# # src: https://gist.github.com/msabramo/2355834
-# function git_prompt_info() {
-#   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-#   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-# }
-#---------------------------------------------------------------#
-# testing
-#---------------------------------------------------------------#
-# export  ~/storeDrive/storeDriveBig/codeDNA/confiFILES/testing/webdrive/chromium
-#---------------------------------------------------------------#
-
