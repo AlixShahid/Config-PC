@@ -229,4 +229,4 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
-[ -s "/home/shaeins7/.bun/_bun" ] && source "/home/shaeins7/.bun/_bun"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
