@@ -1,0 +1,4 @@
+config-file = ./ui
+config-file = ./mapping
+
+shell-integration = zsh

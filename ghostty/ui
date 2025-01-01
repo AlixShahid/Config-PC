@@ -1,0 +1,31 @@
+font-family = JetBrains Mono
+font-size   = 14
+
+window-decoration = false
+
+
+background-opacity    =0.90
+background-blur-radius=15
+#
+foreground           = #dddddd
+background           = #000000
+cursor-color         = #FAC761
+selection-background = #f5c2e7
+selection-foreground = #000000
+#
+palette = 0=#000000
+palette = 1=#cc0403
+palette = 2=#396D41
+palette = 3=#AB774C
+palette = 4=#0d73cc
+palette = 5=#B294BB
+palette = 6=#8ABEB7
+palette = 7=#dddddd
+palette = 8=#767676
+palette = 9=#f2201f
+palette = 10=#23fd00
+palette = 11=#fffd00
+palette = 12=#1a8fff
+palette = 13=#fd28ff
+palette = 14=#14ffff
+palette = 15=#ffffff
