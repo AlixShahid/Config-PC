@@ -92,13 +92,25 @@ fi
 
 # 2b) List of packages to install via paru
 packages=(
+    niri # Window manager
+    hyprland # Window manager
+
+    fuzzel # a suggested Wayland application launcher
+    mako # a suggested Wayland notification daemon
+    swaybg # a suggested Wayland wallpaper tool
+    swaylock # a suggested Wayland screen locker
+    waybar # a suggested Wayland customizable desktop bar
+    xwayland-satellite # for running X11 apps in XWayland
+    xdg-desktop-portal-gtk # a suggested XDG desktop portal
+    xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
+
+    keyd
+    gnome-keyring # for apps to rely on secrets portal
     uwsm
     dunst
     hypridle
     hyprpaper
-    hyprland
     hyprlock
-    waybar
     xdg-desktop-portal-hyprland
     xdg-desktop-portal
 )
