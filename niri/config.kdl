@@ -7,6 +7,12 @@
 // SPAWN PROCESSES AT STARTUP.
 // --------------------------------- //
 
+// for x11
+spawn-at-startup "xwayland-satellite"
+// Or, if you built it by hand:
+// spawn-at-startup "~/path/to/code/target/release/xwayland-satellite"
+
+
 // wallpaper
 spawn-at-startup "hyprpaper"
 
@@ -17,7 +23,7 @@ spawn-at-startup "hyprpaper"
 prefer-no-csd
 
 // the path where screenshots are saved.
-screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot:%Y-%m-%d:%H-%M-%S.png"
+screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot_%Y-%m-%d_%H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
@@ -138,8 +144,8 @@ layout {
         // off
 
         width 1
-        inactive-color "#375e64"
-        active-color "#e5989b"
+        active-color "#377777"
+        inactive-color "#666666"
 
         // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
@@ -292,8 +298,8 @@ input {
 // --------------------------------- //
 
 environment {
-    // DISPLAY ":0"
-    QT_QPA_PLATFORMTHEME "gtk3"
+    DISPLAY ":0"
+    QT_QPA_PLATFORMTHEME "gtk4"
     // Electron-based applications can run directly on Wayland, but it's not the default. For Electron > 28, you can set an environment variable:
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     // Some Java apps like Ghidra can show up blank under xwayland-satellite.
@@ -327,22 +333,22 @@ binds {
     Mod+End                                  { focus-column-last; }
     Mod+H                                    { focus-column-left; }
     Mod+Left                                 { focus-column-left; }
-    Mod+WheelScrollUp         cooldown-ms=50 { focus-column-left; }
+    Mod+WheelScrollUp         cooldown-ms=100 { focus-column-left; }
     Mod+L                                    { focus-column-right; }
     Mod+Right                                { focus-column-right; }
-    Mod+WheelScrollDown       cooldown-ms=50 { focus-column-right; }
+    Mod+WheelScrollDown       cooldown-ms=100 { focus-column-right; }
     Mod+Up                                   { focus-window-up; }
     Mod+K                                    { focus-window-up; }
     Mod+Down                                 { focus-window-down; }
     Mod+J                                    { focus-window-down; }
     Mod+Shift+K                              { focus-workspace-up; }
     Mod+Shift+Up                             { focus-workspace-up; }
-    Mod+Shift+WheelScrollUp   cooldown-ms=50 { focus-workspace-up; }
+    Mod+Shift+WheelScrollUp   cooldown-ms=100 { focus-workspace-up; }
     Mod+Page_Up                              { focus-workspace-up; }
     Mod+Page_Down                            { focus-workspace-down; }
     Mod+Shift+Down                           { focus-workspace-down; }
     Mod+Shift+J                              { focus-workspace-down; }
-    Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-workspace-down; }
+    Mod+Shift+WheelScrollDown cooldown-ms=100 { focus-workspace-down; }
     Mod+1                                    { focus-workspace 1; }
     Mod+2                                    { focus-workspace 2; }
     Mod+3                                    { focus-workspace 3; }
@@ -409,7 +415,7 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Mod+W repeat=false { toggle-overview; }
     Mod+Alt+WheelScrollDown repeat=false cooldown-ms=150 { toggle-overview; }
 
     Mod+Alt+Q { close-window; }
@@ -462,7 +468,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+V { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -514,8 +520,16 @@ layer-rule {
 
 // block out from screen capture.
 window-rule {
+    // Criticals
+    match title=r#"^Unlock Keyring$"#
+    // Apps
+    match app-id=r#"^Bitwarden$"#
+    match app-id=r#"thunderbird"#
+    match app-id=r#"^org\.telegram\.desktop$"#
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r#"^polkit-gnome-authentication-agent-1$"#
+    match app-id=r#"^org\.freedesktop\.policykit1$"#
 
     block-out-from "screen-capture"
 }
@@ -524,6 +538,9 @@ window-rule {
 window-rule {
     match title="Firefox"
     match app-id="Alacritty"
+    match app-id="emac"
+    match app-id="org.gnome.Nautilus" // Gnome file manager
+    match app-id="stremio"
     // match app-id="kitty"
 
     open-maximized true
@@ -532,9 +549,35 @@ window-rule {
 // Float
 window-rule {
     match app-id="mpv"
+    match app-id="blueman-manager"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="eog" // Gnome Imange viewer
+    match app-id="zathura" // PDF reader
+    match app-id="okular" // PDF reader
+    match app-id="dioxus" // Dioxus apps (GUI framework for rust)
+    // Firefox
+    match app-id="firefox" title="^Developer Tools*"
+    match app-id="firefox" title="^Picture-in-Picture$"
+    match app-id="firefox" title="^Sign"
+    match app-id="firefox" title="^About"
+    match app-id="firefox" title="^Library$"
+    // Thunderbird
+    match app-id="thunderbird" title="^Enter"
 
-    open-focused false
+    //
+
+    open-focused true
     open-floating true
+    min-width 200
+    min-height 100
+}
+
+// Min width & height
+window-rule {
+    match app-id="firefox"
+    match app-id="zathura"
+    min-width 50
+    min-height 50
 }
 
 // Work around WezTerm's initial configure bug by setting an empty default-column-width.
@@ -545,11 +588,6 @@ window-rule {
     default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
 
 // Qt used by OBS doesn't signal min size yet, so do it manually.
 window-rule {
@@ -577,6 +615,11 @@ window-rule {
     }
 }
 
+// windows that request the user's attention.
+window-rule {
+    match is-urgent=true
+}
+
 // Enable rounded corners for all windows.
 window-rule {
     geometry-corner-radius 4
@@ -595,3 +638,5 @@ layer-rule {
 
     geometry-corner-radius 12
 }
+
+
