@@ -1,4 +1,4 @@
-;;; helper.el — -*- lexical-binding: t -*-
+;;; helper.el — some utility helper functions -*- lexical-binding: t -*-
 
 (defvar my/emacs-state-root "~/.local/state/emacs/"
   "Base directory for Emacs state (autosave + backup).")
@@ -12,6 +12,7 @@
 (defvar my/emacs-state-backup-prefix nil
   "Prefix char for backups.")
 
+;; I made it over complicated...
 (defun setup-emacs-state-dirs (&optional root backup-prefix autosave-prefix)
   "Redirect Emacs autosaves and backups under ROOT and use custom prefixes.
 ROOT defaults to `~/.local/state/emacs/'.
@@ -71,13 +72,13 @@ AUTOSAVE-PREFIX defaults to BACKUP-PREFIX."
   "Tell Emacs to write its `custom-set-variables` into FILENAME instead of init.el.
 FILENAME is interpreted relative to `user-emacs-directory`."
   (let ((file (locate-user-emacs-file filename)))
-    ;; 1) point Emacs at this file for all future `customize` writes
-    (setq custom-file file)
-    ;; 2) make sure it exists so Customize can write to it
+    ;; make sure file exists so Customize can write to it
     (unless (file-exists-p file)
       (with-temp-buffer (write-file file)))
-    ;; 3) load it silently if there's already content in it
-    (load custom-file nil t)
+    ;; point Emacs at this file for all future `customize` writes
+    (setq custom-file file)
+    ;; load it silently if there's already content in it
+    (load custom-file)
     (message "Custom-file redirected to %s" custom-file)))
 
 

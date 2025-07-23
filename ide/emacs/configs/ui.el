@@ -1,7 +1,8 @@
-;;
+;;; conf.el --- UI related, package indeneptent configs -*- lexical-binding: t -*-
 
-
-(set-frame-font "JetBrains Mono-14" t t)
+;; === Theme ===
+(set-frame-font "JetBrains Mono-13.5" t t)
+(progn (load-theme 'kaolin-dark t))      ;; kaolin-dark is part of kaolin-themes plugin
 
 
 ;; === Disable ===
