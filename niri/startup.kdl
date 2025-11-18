@@ -1,0 +1,23 @@
+// SPAWN PROCESSES AT STARTUP.
+
+// for x11
+spawn-at-startup "xwayland-satellite"
+// Or, if you built it by hand:
+// spawn-at-startup "~/path/to/code/target/release/xwayland-satellite"
+
+// wallpaper
+// spawn-at-startup "hyprpaper"
+
+// ask the clients to omit their client-side decorations if possible.
+// If the client will specifically ask for CSD, the request will be honored.
+// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
+// This option will also fix border/focus ring drawing behind some semitransparent windows.
+prefer-no-csd
+
+// the path where screenshots are saved.
+screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot_%Y-%m-%d_%H-%M-%S.png"
+// You can also set this to null to disable saving screenshots to disk.
+// screenshot-path null
+
+// https://docs.vicinae.com/quickstart/niri#main-configuration
+spawn-sh-at-startup "vicinae server"

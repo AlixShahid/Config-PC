@@ -95,11 +95,14 @@ packages=(
     niri # Window manager
     hyprland # Window manager
 
-    fuzzel # a suggested Wayland application launcher
-    mako # a suggested Wayland notification daemon
-    swaybg # a suggested Wayland wallpaper tool
-    swaylock # a suggested Wayland screen locker
-    waybar # a suggested Wayland customizable desktop bar
+    # fuzzel # a suggested Wayland application launcher
+    # mako   # a suggested Wayland notification daemon
+    # swaylock # a suggested Wayland screen locker
+    # waybar # a suggested Wayland customizable desktop bar
+    # dunst
+
+
+
     xwayland-satellite # for running X11 apps in XWayland
     xdg-desktop-portal-gtk # a suggested XDG desktop portal
     xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
@@ -107,12 +110,60 @@ packages=(
     keyd
     gnome-keyring # for apps to rely on secrets portal
     uwsm
-    dunst
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal
+
+    hyprpicker
     hypridle
     hyprpaper
     hyprlock
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal
+
+    grim
+    slurp
+
+    cava                  # Audio visualizer
+    cliphist              # Clipboard history functionality
+    i2c-tools             # External monitor brightness control
+    matugen               # Dynamic wallpaper-based theming
+    qt6-multimedia        # Sound effect support
+    qt6-multimedia-ffmpeg
+    power-profiles-daemon # Set power profile
+    qt6ct                 # Qt6 application theming
+    wl-clipboard          # Copy functionality for PIDs and other elements
+    swaybg                # a suggested Wayland wallpaper tool
+    swayidle-git          # Idle management daemon for Wayland
+
+    quickshell
+    dms-shell-git         #
+    greetd-dms-greeter-git
+    vicinae
+
+
+    # Wayland support
+    polkit               #  agents that can prompt user for authentication.
+    glib                 #  agents that can prompt user for authentication.
+    libdrm
+    gstreamer
+    egl-gbm
+    libpipewire
+    libxcb
+    qt6-wayland
+    wayland
+    wayland-protocols
+
+    # For Batter
+    accountsservice # AccountsService is needed to persist user profile configurations such as profile pictures
+    cmake
+    jemalloc        # recommended for better memory management
+    pam             # PAM authentication
+    dbus
+
+    qt6-base
+    qt6-declarative
+    qt6-shadertools
+    pkg-config
+    cli11
+
 )
 
 # 2c) Install or skip each package
