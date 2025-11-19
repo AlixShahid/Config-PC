@@ -2,11 +2,6 @@
 
 // for x11
 spawn-at-startup "xwayland-satellite"
-// Or, if you built it by hand:
-// spawn-at-startup "~/path/to/code/target/release/xwayland-satellite"
-
-// wallpaper
-// spawn-at-startup "hyprpaper"
 
 // ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -21,3 +16,6 @@ screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot_%Y-%m-%d_%H-%M-%S.
 
 // https://docs.vicinae.com/quickstart/niri#main-configuration
 spawn-sh-at-startup "vicinae server"
+
+// https://danklinux.com/docs/dankmaterialshell/cli-process-management?_highlight=login#running-dms-at-login
+spawn-at-startup "dms" "run"
