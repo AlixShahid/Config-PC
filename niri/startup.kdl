@@ -16,6 +16,3 @@ screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot_%Y-%m-%d_%H-%M-%S.
 
 // https://docs.vicinae.com/quickstart/niri#main-configuration
 spawn-sh-at-startup "vicinae server"
-
-// https://danklinux.com/docs/dankmaterialshell/cli-process-management?_highlight=login#running-dms-at-login
-spawn-at-startup "dms" "run"
