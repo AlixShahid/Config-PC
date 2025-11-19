@@ -23,9 +23,3 @@ systemctl --user add-wants niri.service dms
 
 dms greeter enable
 dms greeter sync
-# sudo systemctl enable greetd.service
-
-
-# https://danklinux.com/docs/dankmaterialshell/installation#systemd-integration
-systemctl --user enable dms.service
-
