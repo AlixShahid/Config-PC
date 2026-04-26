@@ -24,3 +24,6 @@ clipboard {
 layout {
     border { }
 }
+
+include "dms/cursor.kdl"
+include "dms/binds.kdl"

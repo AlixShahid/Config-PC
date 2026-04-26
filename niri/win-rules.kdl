@@ -1,6 +1,10 @@
 // Window rules let you adjust behavior for individual windows.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
+// HELP
+// '$niri msg pick-window' To get the window class and title
+// '$niri msg windows'     To see a list of all windows along with their titles and app IDs
+
 // Block out mako notifications from screencasts.
 layer-rule {
     match namespace="^notifications$"
@@ -28,6 +32,7 @@ window-rule {
 // Full Screen
 window-rule {
     match title="Firefox"
+    match app-id="librewolf"
     match app-id="Alacritty"
     match app-id="emac"
     match app-id="org.gnome.Nautilus" // Gnome file manager
@@ -46,6 +51,13 @@ window-rule {
     match app-id="zathura" // PDF reader
     match app-id="okular" // PDF reader
     match app-id="dioxus" // Dioxus apps (GUI framework for rust)
+    // LibreWolf
+    match app-id="librewolf" title="^LibreWolf - Choose a profile$"
+    match app-id="librewolf" title="^Developer Tools*"
+    match app-id="librewolf" title="^Picture-in-Picture$"
+    match app-id="librewolf" title="^Sign"
+    match app-id="librewolf" title="^About"
+    match app-id="librewolf" title="^Library$"
     // Firefox
     match app-id="firefox" title="^Developer Tools*"
     match app-id="firefox" title="^Picture-in-Picture$"
@@ -54,9 +66,18 @@ window-rule {
     match app-id="firefox" title="^Library$"
     // Thunderbird
     match app-id="thunderbird" title="^Enter"
+    // Chrome
+    match app-id="chromium" title="^Meet$"
+    // Jetbrains
+    match app-id="jetbrains-studio" title="^Android Studio Setup Wizard$"
+    match app-id="jetbrains-studio" title="^Welcome to Android Studio$"
+    match app-id="jetbrains-studio" title="^Device Manager$"
+    // Emulator
+    match app-id="Emulator"
+    // Scrcpy
+    match app-id="QtScrcpy"
 
     //
-
     open-focused true
     open-floating true
     min-width 200
@@ -66,9 +87,12 @@ window-rule {
 // Min width & height
 window-rule {
     match app-id="firefox"
-    match app-id="zathura"
     min-width 50
     min-height 50
+}
+window-rule {
+    match app-id="zathura"
+    min-height 900
 }
 
 // Work around WezTerm's initial configure bug by setting an empty default-column-width.
