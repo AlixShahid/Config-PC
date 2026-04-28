@@ -16,3 +16,7 @@ screenshot-path "~/Media/Pictures/ScreenShots/niri/screenshot_%Y-%m-%d_%H-%M-%S.
 
 // https://docs.vicinae.com/quickstart/niri#main-configuration
 spawn-sh-at-startup "vicinae server"
+
+// For monitor management
+// https://github.com/emersion/kanshi
+spawn-at-startup "kanshi"
