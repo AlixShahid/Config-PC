@@ -1,5 +1,8 @@
 // SPAWN PROCESSES AT STARTUP.
 
+// status bar
+spawn-at-startup "waybar"
+
 // for x11
 spawn-at-startup "xwayland-satellite"
 
