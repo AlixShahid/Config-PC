@@ -87,7 +87,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return    hotkey-overlay-title="Open a Terminal: kitty"  { spawn "kitty"; }
     Mod+D         repeat=false                                   { spawn "vicinae" "toggle"; }
-    Super+Shift+X hotkey-overlay-title="Lock the Screen"         { spawn "dms" "ipc" "call" "lock" "lock"; }
+    //Super+Shift+X hotkey-overlay-title="Lock the Screen"         { spawn "dms" "ipc" "call" "lock" "lock"; }
 
 
     // The allow-when-locked=true property makes them work even when the session is locked.

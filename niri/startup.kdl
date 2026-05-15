@@ -3,6 +3,9 @@
 // status bar
 spawn-at-startup "waybar"
 
+// wallpapaer
+spawn-at-startup "sleep 4 && swaybg -i ~/Media/Pictures/Wallpapers/wallpaper-lion.png -m fill"
+
 // for x11
 spawn-at-startup "xwayland-satellite"
 
